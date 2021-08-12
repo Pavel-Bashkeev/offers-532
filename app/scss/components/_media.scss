@@ -1,9 +1,10 @@
 @media (max-width:550px) {
-  body{
-    &::-webkit-scrollbar{
+  body {
+    &::-webkit-scrollbar {
       display: none;
     }
   }
+
   .link-buy {
     width: fit-content;
     display: block;
@@ -62,7 +63,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        
+
       }
 
       &::after {
@@ -497,37 +498,44 @@
 
   // info-more
   // comment
-  .slider{
+  .slider {
     max-width: 480px;
   }
-  .slider-inner{
+
+  .slider-inner {
     max-width: 480px;
     height: fit-content;
   }
-  .slider-item{
+
+  .slider-item {
     background-color: #F66EB2;
     padding: 28px 25px 60px;
     border-radius: 30px;
-    
-    &:not(:last-child){
+    margin: 0 auto;
+
+    &:not(:last-child) {
       margin-bottom: 10px;
     }
-    &__box{
+
+    &__box {
       width: 109px;
       height: 109px;
       margin-right: 30px;
     }
-    &__user{
+
+    &__user {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
     }
-    &__img{
+
+    &__img {
       width: 109px;
       height: 109px;
       border-radius: 50%;
     }
-    &__text{
+
+    &__text {
       padding: 65px 45px 19px 57px;
       background-image: url('../images/dest/bg-comment.png');
       background-position: center;
@@ -535,8 +543,49 @@
       background-size: 100% 100%;
     }
   }
-  .comments{
+
+  .comments {
     overflow: hidden;
   }
+
+  .slick-slide {
+    margin: 0 15px;
+  }
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+
+  .slick-dots {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    z-index: 10000000;
+    position: relative;
+    li{
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+      button{
+        font-size: 0;
+      border: none;
+      outline: none;
+      width: 14px;
+      height: 14px;
+      background-color: #adafde;
+      display: block;
+      border-radius: 50%;
+      }
+    }
+    li.slick-active{
+      button{
+        background-color: #02D5BD;
+      }
+    }
+  }
+  .first-item-slick{
+    margin-top: -150px;
+  }
+
   // comment
 }
