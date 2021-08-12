@@ -1,0 +1,301 @@
+@media (max-width:480px) {
+  .link-bay {
+    width: fit-content;
+    display: block;
+    margin: 0 auto 24px;
+    padding: 18px 52px 21px;
+    background: linear-gradient(270deg, #FF9A33 0%, #F7759F 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font: $font-middle-bold;
+    border-radius: 150px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  // hero
+  .hero {
+    padding: 26px 0 55px;
+    background-color: $bg;
+    color: $white;
+    background-image: url('../images/dest/decor/hero-decor1.png');
+    background-repeat: no-repeat;
+    background-size: 88%;
+    background-position: 0 0;
+    position: relative;
+    z-index: 1;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      background-image: url('../images/dest/decor/hero-decor2.png');
+      background-position: 100% 54%;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    }
+    &__title {
+      font: 900 25px / 34px $font;
+      margin-bottom: 30px;
+    }
+
+    &__product {
+      width: 370px;
+      margin: 0 auto 15px;
+      position: relative;
+      &::after,&::before{
+        content: '';
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 65px;
+        height: 65px;
+      }
+      &::before{
+        background-image: url('../images/dest/decor/treeLeaf-decor.png');
+        top:0;
+        right: 0;
+      }
+      &::before{
+        width: 56px;
+        height: 56px;
+        background-image: url('../images/dest/decor/star-green.svg');
+        bottom:0;
+        left: 0;
+      }
+    }
+
+    &__link {
+      margin-bottom: 60px;
+    }
+
+    .form {
+      width: 390px;
+      margin: 0 auto;
+      &__input {
+        height: 73px;
+        width: 100%;
+        background-color: #FFFFFF;
+        border: 1px solid #D3D3D3;
+        font: 400 18px/24px "Montserrat";
+        text-align: center;
+        color: #a9a9a9;
+        border-radius: 40px;
+        margin-bottom: 20px;
+        outline: none;
+
+        &::placeholder {
+          font: 400 18px/24px "Montserrat";
+          text-align: center;
+          color: #a9a9a9;
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+
+    &-image {
+      width: 112px;
+    }
+
+    &::after {
+      content: '';
+      width: 77px;
+      height: 77px;
+      background-image: url('../images/dest/decor/star-pink.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 127px;
+      top: -15px;
+    }
+  }
+
+  .hero-info {
+    margin-bottom: 50px;
+
+    &__left {
+      max-width: 196px;
+      width: 100%;
+      margin-right: 22px;
+    }
+
+    &__discount {
+      text-align: center;
+      width: 100%;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      background-color: $pink;
+      font: 900 40px/54px $font;
+      margin-bottom: 12px;
+      padding: 5px 0;
+    }
+
+    &__prices {
+      position: relative;
+      z-index: 1;
+      color: $black;
+      padding: 24px 10px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: rgb(104, 107, 181);
+        background: linear-gradient(210deg, rgba(104, 107, 181, 1) -10%, rgba(255, 255, 255, 1) 50%, rgba(104, 107, 181, 1) 110%);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 20px;
+      }
+    }
+
+    &__price {
+      text-align: center;
+      font: 700 50px/68px $font;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &--old {
+        font-size: 40px;
+        line-height: 54px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 87%;
+          height: 7px;
+          background-color: #ff002e;
+          transform: rotate(173.66deg) translateY(-50%);
+          top: 37%;
+          left: 16px;
+        }
+      }
+    }
+
+    &__text {
+      font: $font-small-bold;
+      padding-right: 25px;
+    }
+  }
+
+  .hero-list {
+    &__item {
+      padding-left: 114px;
+      padding-right: 20px;
+      position: relative;
+      font: $font-middle-bold;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 24px;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 42px;
+        height: 42px;
+      }
+
+      &:first-child {
+        margin-bottom: 60px;
+
+        &::after {
+          background-image: url('../images/dest/sprite.svg#eye');
+        }
+
+        &::before {
+          top: -58%;
+          left: 10px;
+        }
+      }
+
+      &:nth-child(2) {
+        &::after {
+          background-image: url('../images/dest/sprite.svg#neuron');
+        }
+
+        &::before {
+          top: 0;
+          left: 10px;
+        }
+      }
+
+      &:last-child {
+        &::after {
+          background-image: url('../images/dest/sprite.svg#baby');
+        }
+
+        &::before {
+          top: 0;
+          left: 10px;
+        }
+      }
+
+      &::before {
+        content: '';
+        width: 72px;
+        height: 72px;
+        background: linear-gradient(180.34deg, #F56FB1 0.3%, rgba(245, 111, 177, 0) 108.75%);
+        border-radius: 20px;
+        transform: rotate(-50.3deg);
+        position: absolute;
+      }
+
+    }
+  }
+  // hero
+  // product-descr
+  .product-descr{
+    &__box{
+      max-width: 270px;
+      margin: 0 auto 50px;
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 95px;
+        height: 95px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../images/dest/decor/star-pinkBig.png');
+      }
+    }
+    &__text{
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+      &--accent{
+        font-weight: 800;
+      }
+    }
+  }
+  // product-descr
+  // cart
+
+  // cart
+}
