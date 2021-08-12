@@ -1,4 +1,4 @@
-@media (max-width:414px) {
+@media (max-width:550px) {
   body{
     &::-webkit-scrollbar{
       display: none;
@@ -62,14 +62,15 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 65px;
-        height: 65px;
+        
       }
 
-      &::before {
+      &::after {
         background-image: url('../images/dest/decor/treeLeaf-decor.png');
         top: 0;
         right: 0;
+        width: 65px;
+        height: 65px;
       }
 
       &::before {
@@ -499,10 +500,15 @@
   .slider{
     max-width: 480px;
   }
+  .slider-inner{
+    max-width: 480px;
+    height: fit-content;
+  }
   .slider-item{
     background-color: #F66EB2;
     padding: 28px 25px 60px;
     border-radius: 30px;
+    
     &:not(:last-child){
       margin-bottom: 10px;
     }
