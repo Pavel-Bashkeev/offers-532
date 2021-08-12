@@ -8,7 +8,7 @@
 		content="VeraKit - Игрушка развивающая,подвеска зебра в коляску с колокольчиком погремушкой">
 	<meta name="keywords" content="VeraKit - Игрушка развивающая,подвеска зебра в коляску с колокольчиком погремушкой">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/slick.css">
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/style.min.css">
 	<title>VeraKit - Игрушка развивающая</title>
 </head>
@@ -185,21 +185,21 @@
 			</div>
 		</div>
 		<section class="comments section-styles">
-			<div class="container">
+			<div class="container comments__container">
 				<h3 class="section-title">Впечатления родителей:</h3>
-				<div class="slider">
-					<div class="slider-inner">
-						<div class="slider-item">
-							<div class="slider-item__user">
-								<div class="slider-item__box">
-									<img class="slider-item__img" src="./images/dest/user-photo/user-1.png" alt="">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" style="height: 677px;">
+							<div class="swiper-slide__user">
+								<div class="swiper-slide__box">
+									<img class="swiper-slide__img" src="./images/dest/user-photo/user-1.png" alt="">
 								</div>
-								<div class="slider-item__info">
-									<p class="slider-item__info-text">Ольга,</p>
-									<p class="slider-item__info-text">Воронеж</p>
+								<div class="swiper-slide__info">
+									<p class="swiper-slide__info-text">Ольга,</p>
+									<p class="swiper-slide__info-text">Воронеж</p>
 								</div>
 							</div>
-							<p class="slider-item__text">
+							<p class="swiper-slide__text">
 								Заказывали зебру и два набора карточек, сафари и лесные животные. Очень довольны
 								качеством, классные
 								картинки, мягкая приятная зебра, а главное – все это для развития мозга малыша, что
@@ -208,17 +208,17 @@
 								трогаем.
 							</p>
 						</div>
-						<div class="slider-item">
-							<div class="slider-item__user">
-								<div class="slider-item__box">
-									<img class="slider-item__img" src="./images/dest/user-photo/user-2.png" alt="">
+						<div class="swiper-slide">
+							<div class="swiper-slide__user">
+								<div class="swiper-slide__box">
+									<img class="swiper-slide__img" src="./images/dest/user-photo/user-2.png" alt="">
 								</div>
-								<div class="slider-item__info">
-									<p class="slider-item__info-text">Алексей,</p>
-									<p class="slider-item__info-text">Н. Новгород</p>
+								<div class="swiper-slide__info">
+									<p class="swiper-slide__info-text">Алексей,</p>
+									<p class="swiper-slide__info-text">Н. Новгород</p>
 								</div>
 							</div>
-							<p class="slider-item__text">
+							<p class="swiper-slide__text">
 								Дочке подарили погремушку зебру и набор карточек с домашними животными. Нам уже годик,
 								но погремушка и
 								карточки зашли и нам. У погремушки очень приятный звук, малышка ей звенит, трогает, не
@@ -230,17 +230,17 @@
 								доживут.
 							</p>
 						</div>
-						<div class="slider-item">
-							<div class="slider-item__user">
-								<div class="slider-item__box">
-									<img class="slider-item__img" src="./images/dest/user-photo/user-3.png" alt="">
+						<div class="swiper-slide">
+							<div class="swiper-slide__user">
+								<div class="swiper-slide__box">
+									<img class="swiper-slide__img" src="./images/dest/user-photo/user-3.png" alt="">
 								</div>
-								<div class="slider-item__info">
-									<p class="slider-item__info-text">Любовь,</p>
-									<p class="slider-item__info-text">Самара</p>
+								<div class="swiper-slide__info">
+									<p class="swiper-slide__info-text">Любовь,</p>
+									<p class="swiper-slide__info-text">Самара</p>
 								</div>
 							</div>
-							<p class="slider-item__text">
+							<p class="swiper-slide__text">
 								Мой сынок родился 2 недели назад, но я уже заказала ему набор – погремушка зебра и набор
 								карточек «Лес».
 								Погремушку я повесила в коляску, кажется, что сын уже смотрит на нее, она ему явно
@@ -256,12 +256,14 @@
 							</p>
 						</div>
 					</div>
+					
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</section>
 	</main>
 
-
+	<script src="./js/swiper.min.js"></script>
 	<script src="./js/main.min.js"></script>
 </body>
 
