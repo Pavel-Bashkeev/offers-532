@@ -84,7 +84,7 @@ function browsersync() {
               server: { baseDir: 'app/' },
               notify: false,
               //  notify: false убирает уведомление 
-              online: false
+              online: true
        });
 }
 function cleanimg() {
