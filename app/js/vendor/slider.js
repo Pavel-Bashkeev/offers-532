@@ -3,15 +3,9 @@ const slider = new Swiper('.swiper-container',{
   direction: 'horizontal',
   autoHeight: true,
   loop: false,
+  spaceBetween:10,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   },
 });
-window.addEventListener('DOMContentLoaded', ()=>{
-  const slides =document.querySelectorAll('.swiper-slide');
-const dotsBox = document.querySelector('.swiper-pagination-fraction');
-
-slides.forEach((item, index) => {
- 
-});
-})

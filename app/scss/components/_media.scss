@@ -1,9 +1,4 @@
 @media (max-width:550px) {
-  body {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
 
   .link-buy {
     width: fit-content;
@@ -22,7 +17,7 @@
 
   // hero
   .hero {
-    padding: 26px 0 55px;
+    padding: 26px 0 80px;
     background-color: $bg;
     color: $white;
     background-image: url('../images/dest/decor/hero-decor1.png');
@@ -52,7 +47,7 @@
     }
 
     &__product {
-      width: 370px;
+      max-width: 370px;
       margin: 0 auto 15px;
       position: relative;
 
@@ -78,7 +73,7 @@
         width: 56px;
         height: 56px;
         background-image: url('../images/dest/decor/star-green.svg');
-        bottom: 0;
+        bottom: 60px;
         left: 0;
       }
     }
@@ -88,7 +83,7 @@
     }
 
     .form {
-      width: 390px;
+      max-width: 390px;
       margin: 0 auto;
 
       &__input {
@@ -429,8 +424,59 @@
   // cart
   // kit
   .kit {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-image: url('../images/dest/decor/decor-rect.png');
+      background-position: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 72px;
+      height: 72px;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 42%;
+      right: 0;
+      background-image: url('../images/dest/decor/star-greenBig2.png');
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 72px;
+      height: 72px;
+      z-index: -1;
+    }
+
+    .link-buy {
+      color: $white;
+    }
+
     &__items {
       margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 25%;
+        left: 43%;
+        width: 72px;
+        height: 72px;
+        background-image: url('../images/dest/decor/star-pinkBig.png');
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+      }
     }
   }
 
@@ -498,12 +544,30 @@
 
   // info-more
   // comment
-  .comments{
+  .comments {
     padding-top: 0;
-    &__container{
+    margin-bottom: 30px;
+
+    &__container {
       position: relative;
+      z-index: 1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -29px;
+        left: 20px;
+        background-image: url('../images/dest/decor/star-greenBig.png');
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 72px;
+        height: 72px;
+        z-index: -1;
+      }
     }
   }
+
   .swiper-container {
     max-width: 480px;
   }
@@ -518,11 +582,12 @@
     padding: 28px 25px 60px;
     border-radius: 30px;
     margin: 0 auto;
-
-    &:not(:last-child) {
-      margin-bottom: 10px;
+    &:nth-child(2){
+      background-color: #02D5BD;
     }
-
+    &:nth-child(3){
+      background-color: $bg;
+    }
     &__box {
       width: 109px;
       height: 109px;
@@ -535,6 +600,11 @@
       margin-bottom: 20px;
     }
 
+    &__info {
+      color: $white;
+      font-weight: 900;
+    }
+
     &__img {
       width: 109px;
       height: 109px;
@@ -542,7 +612,7 @@
     }
 
     &__text {
-      padding: 65px 45px 19px 57px;
+      padding: 65px 45px 40px 57px;
       background-image: url('../images/dest/bg-comment.png');
       background-position: center;
       background-repeat: no-repeat;
@@ -553,13 +623,333 @@
   .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-right: 11px;
     }
   }
-  .swiper-pagination{
+
+  .swiper-pagination {
     left: 0;
     right: 0;
-    bottom: -40px;
+    bottom: -60px;
+  }
+
+  // comment
+  // order
+  .order {
+    background-color: $bg;
+    color: $white;
+
+    &__title {
+      color: $white;
+    }
+  }
+
+  .order-list {
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 90%;
+      width: 3px;
+      position: absolute;
+      top: 13px;
+      left: 23px;
+      border-left: 3px dotted #02d5bd;
+    }
+
+    &__item {
+      padding-left: 70px;
+      padding-right: 10px;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-child(1) {
+        &::before {
+          background-image: url('../images/dest/iconOrder/item-1.png');
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          background-image: url('../images/dest/iconOrder/item-2.png');
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          background-image: url('../images/dest/iconOrder/item-4.png');
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          background-image: url('../images/dest/iconOrder/item-3.png');
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__title {
+      display: block;
+      font: 700 24px/ 30px $font;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font: 400 18px / 22px $font;
+    }
+  }
+
+  // order
+  .hero-after-order {
+    background-image: none;
+    position: relative;
+
+    .container {
+      .hero-list {
+        margin-bottom: 50px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -44px;
+      left: 0;
+      width: 463px;
+      height: 290px;
+      background-image: url('../images/dest/decor/decor-order.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 50%;
+    }
+  }
+
+  .hero.hero-after-order {
+    padding: 26px 0 55px;
+
+    &::after {
+      background-position: 100% 62%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .hero::after {
+    background-position: 100% 50%;
+  }
+
+  .hero-info__text {
+    padding-right: 0px;
+  }
+
+  .hero-info__left {
+    max-width: 160px;
+    margin-right: 12px;
+  }
+
+  .hero-info__price {
+
+    font: 700 40px/50px "Nunito";
+  }
+
+  .hero-info__price--old {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .info-more__text {
+    max-width: 200px;
+    font-size: 16px;
+  }
+
+  .info-more__container::after {
+    background-size: 63%;
+
+    background-position: 100% -32px;
+
+  }
+
+  .hero-after-order::before {
+    width: 80%;
+    height: 290px;
+  }
+
+}
+
+@media (max-width:400px) {
+  .link-buy {
+    padding: 18px 40px 21px;
+    font: 700 23px/34px Nunito;
+  }
+
+  .hero::after {
+    background-position: 100% 47%;
+  }
+
+  .hero-info__text {
+    font: 700 15px/22px Nunito;
+    padding-right: 8px;
+  }
+
+  .hero-list__item {
+    padding-left: 114px;
+    padding-right: 5px;
+    font: 700 20px/24px Nunito;
+  }
+
+  .hero-list__item:first-child::before {
+    top: -90%;
+  }
+
+  .cart-list__text {
+    max-width: 280px;
+  }
+
+  .cart::before {
+    background-position: 100% 8%;
+  }
+
+  .cart-box::before {
+    width: 60px;
+    height: 60px;
+
+    bottom: -3px;
+  }
+
+  .kit-item:nth-child(odd) .kit-item__descr {
+    padding-right: 0px;
+  }
+
+  .info-more__container::after {
+    background-image: url(../images/dest/decor/washing.png);
+    background-size: 59%;
+    background-repeat: no-repeat;
+    background-position: 100% -17px;
+    content: '';
+    width: 100%;
+    height: 115%;
+    position: absolute;
+    top: -23px;
+    left: 0;
+  }
+
+  .swiper-slide__text {
+    padding: 65px 14px 40px 57px;
+  }
+}
+
+@media(max-width: 375px) {
+  .hero::after {
+    background-position: 100% 54%;
+  }
+
+  .logo::after {
+
+    right: 80px;
+
+  }
+
+  .kit-item__descr {
+    font-size: 15px;
+  }
+
+  .kit-item__img {
+    max-width: 210px;
+  }
+
+  .swiper-slide__text {
+    padding: 65px 6px 40px 25px;
+    font-size: 17px;
+  }
+
+  .swiper-slide {
+    padding: 30px 25px 42px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero__title {
+    font: 900 20px/27px "Nunito";
+  }
+
+  .hero-info__text {
+    font: 700 14px/22px "Nunito";
+    padding-right: 0px;
+  }
+
+  .hero-info__price {
+    font: 700 30px/40px "Nunito";
+  }
+
+  .hero-info__price--old {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .hero-info__price--old::before {
+    width: 74%;
+  }
+
+  .hero::after {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-info__text {
+    font: 700 12px/22px Nunito;
+    margin-bottom: 20px;
+  }
+
+  .hero::after {
+    background-position: 100% 50%;
+  }
+
+  .hero-list__item {
+
+    font: 700 18px/20px Nunito;
+  }
+
+  .hero-list__item:first-child::before {
+    top: -100%;
+  }
+
+  .cart-list__text {
+    max-width: 230px;
+  }
+
+  .kit-item__img {
+    max-width: 160px;
+  }
+
+  .swiper-slide__text {
+    padding: 65px 6px 40px 25px;
+    font-size: 14px;
+  }
+
+  .info-more__container::after {
+    background-position: 100% 10px;
+  }
+
+  .info-more__text {
+    max-width: 189px;
+    font-size: 14px;
   }
 }
