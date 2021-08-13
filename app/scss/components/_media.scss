@@ -748,6 +748,41 @@
       background-position: 100% 62%;
     }
   }
+  .footer{
+    background-color: $bg;
+    color: $white;
+    &__container{
+      position: relative;
+      padding: 30px 15px;
+      &::after{
+        content: '';
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: #02D5BD;
+      }
+    }
+    &__text{
+      text-align: center;
+      font-size: 17px;
+      margin-bottom: 10px;
+      &-doc{
+        spna{
+          font-size: 15px;
+        }
+      }
+    }
+    &__link{
+      width: fit-content;
+      display: block;
+      margin: 0 auto;
+      font-size: 12px;
+      color:#02D5BD;
+    }
+  }
 }
 
 @media (max-width: 450px) {
